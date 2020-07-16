@@ -99,12 +99,18 @@ label{font-size: 12px;}
 	margin-bottom: 10px;
 	padding-bottom: 8px;
 	border-bottom: 1px solid #eee;
+	font-size: 14px;
+	letter-spacing: 0.03rem;
 }
 .question > .details{
 	font-size: 12px;
 }
 
-
+.answers{
+	margin-bottom: 10px;
+	font-size: 14px;
+	border-bottom: .5px solid #eee;
+}
 
 footer{
 	color: #1761a0;
