@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>All Questions - IT Support Online</title>
+	<title>All Users - IT Support Online</title>
 	<link rel="stylesheet" type="text/css" href="../resource/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../resource/css/styles.css">
 </head>
@@ -10,9 +10,9 @@
 		<img src="../resource/image/logo.png" class="logo">
 
 		<div class="nav">
-			<a href="index.html">Home</a>
-			<a href="dashboard.html">Dashboard</a>
-			<a href="../logout.html">Logout</a>
+			<a href="index.php">Home</a>
+			<a href="dashboard.php">Dashboard</a>
+			<a href="../logout.php">Logout</a>
 		</div>
 	</header>
 
@@ -20,29 +20,22 @@
 	<section class="mt-4">			
 		
 		<div class="row">
-			<div class="col-12 offset-md-1 col-md-10 mb-3 d-flex justify-content-between">
-				<span class="title">My Questions</span>
-				<a href="ask.html" class="btn btn-sm btn-ghost">Ask question</a>
-			</div>
-
+			<div class="col-12 mb-3"><div class="text-center"><span class="title">Users</span></div></div>
+			
 			<div class="col-12 offset-md-1 col-md-10">
 				
 				<table class="table table-bordered table-sm">
 					<tr>
 						<th>No.</th>
-						<th>Question</th>
-						<th>Category</th>
-						<th class="text-center">Action</th>
+						<th>Username</th>
+						<th>Email</th>
+						<th>Registered on</th>
 					</tr>
 					<tr>
 						<td>1</td>
-						<td>
-							<a href="../answers.html">Question will be printed here.</a>
-						</td>
-						<td>C++</td>
-						<td class="text-center">
-							<a href="" class="badge badge-danger">Delete</a>
-						</td>
+						<td>michael</td>
+						<td>michael.jackson@gmail.com</td>
+						<td>1/10/2020</td>
 					</tr>
 				</table>
 

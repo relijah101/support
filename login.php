@@ -10,7 +10,7 @@
 		<img src="resource/image/logo.png" class="logo">
 
 		<div class="nav">
-			<a href="index.html">Home</a>
+			<a href="index.php">Home</a>
 			<a href="" class="active">Login</a>
 		</div>
 	</header>

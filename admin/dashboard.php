@@ -10,9 +10,9 @@
 		<img src="../resource/image/logo.png" class="logo">
 
 		<div class="nav">
-			<a href="index.html">Home</a>
+			<a href="index.php">Home</a>
 			<a href="#" class="active">Dashboard</a>
-			<a href="../logout.html">Logout</a>
+			<a href="../logout.php">Logout</a>
 		</div>
 	</header>
 
@@ -28,7 +28,7 @@
 					
 					<div class="col-md-4">
 						<div class="card">
-							<a href="users.html" class="d-flex justify-content-center align-items-center h-100">
+							<a href="users.php" class="d-flex justify-content-center align-items-center h-100">
 								<h1>12</h1>
 							</a>
 							<div class="text">Users</div>
@@ -37,7 +37,7 @@
 
 					<div class="col-md-4">
 						<div class="card">
-							<a href="questions.html" class="d-flex justify-content-center align-items-center h-100">
+							<a href="questions.php" class="d-flex justify-content-center align-items-center h-100">
 								<h1>12</h1>
 							</a>
 							<div class="text">Questions</div>
@@ -46,7 +46,7 @@
 
 					<div class="col-md-4">
 						<div class="card">
-							<a href="categories.html" class="d-flex justify-content-center align-items-center h-100">
+							<a href="categories.php" class="d-flex justify-content-center align-items-center h-100">
 								<h1>12</h1>
 							</a>
 							<div class="text">Categories</div>

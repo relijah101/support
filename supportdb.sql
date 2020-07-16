@@ -1,4 +1,4 @@
-CREATE TABLE role(
+CREATE TABLE roles(
 	id INT NOT NULL AUTO_INCREMENT,
 	name VARCHAR(15) NOT NULL,
 	PRIMARY KEY (id)
@@ -31,7 +31,7 @@ CREATE TABLE questions(
 	question TEXT NOT NULL,
 	date DATETIME DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY (id),
-	FOREIGN KEY (user_id) REFERENCES users (id) 
+	FOREIGN KEY (user_id) REFERENCES users (id), 
 	FOREIGN KEY (category_id) REFERENCES categories (id) 
 );
 

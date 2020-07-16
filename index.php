@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Answers - IT Support Online</title>
+	<title>IT Support Online Homepage</title>
 	<link rel="stylesheet" type="text/css" href="resource/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="resource/css/styles.css">
 </head>
@@ -18,28 +18,28 @@
 
 			<div class="nav">
 				<a href="#" class="active">Home</a>
-				<a href="login.html">Login</a>
+				<a href="login.php">Login</a>
 			</div>
 		</header>
 
 
 		<section class="row">		
-			<div class="col-2">
+			<div class="col-2 border-right">
 				<div class="title mb-1">All Categories</div>
 
 				<div class="d-flex flex-column">
-					<a href="index.html" class="mb-1 p-2">Java</a>
-					<a href="index.html" class="mb-1 p-2">Java</a>
-					<a href="index.html" class="mb-1 p-2">Java</a>
-					<a href="index.html" class="mb-1 p-2">Java</a>
-					<a href="index.html" class="mb-1 p-2">Java</a>
+					<a href="index.php" class="mb-1 p-2">Java</a>
+					<a href="index.php" class="mb-1 p-2">Java</a>
+					<a href="index.php" class="mb-1 p-2">Java</a>
+					<a href="index.php" class="mb-1 p-2">Java</a>
+					<a href="index.php" class="mb-1 p-2">Java</a>
 				</div>
 			</div>
 			<div class="col-8 border-left">
 				<div>
 					<div class="question">
 						<span class="text-success font-weight-bold">john_j1 : </span>
-						<a href="answers.html">
+						<a href="answers.php">
 							An an valley indeed so no wonder future nature vanity. Debating all she mistaken indulged believed provided declared. He many kept on draw lain song as same.
 						</a>
 
@@ -50,21 +50,18 @@
 						</div>
 					</div>
 
-					<div class="my-2">
-						<textarea class="form-control form-control-sm mb-1" name="answer" placeholder="Type an answer here"></textarea>
-						<div class="text-right">
-							<button class="btn btn-sm btn-ghost">Reply</button>
+
+					<div class="question">
+						<span class="text-success font-weight-bold">marryann : </span>
+						<a href="answers.php">
+							Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. Much nor game son say feel. Fat make met can must form into gate. Me we offending prevailed discovery
+						</a>
+
+						<div class="details d-flex justify-content-between">
+							<div><small class="text-muted">Answers:</small> 5</div>
+							<div><small class="text-muted">Category:</small> Java</div>
+							<div><small class="text-muted">Posted:</small> 12/12/2020 08:00</div>
 						</div>
-					</div>
-
-					<div class="answers">
-						<span class="text-info font-weight-bold">charles : </span>
-						Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. Much nor game son say feel. Fat make met can must form into gate. Me we offending prevailed discovery
-					</div>
-
-					<div class="answers">
-						<span class="text-info font-weight-bold">michael01 : </span>
-						An an valley indeed so no wonder future nature vanity. Debating all she mistaken indulged believed provided declared. He many kept on draw lain song as same.
 					</div>
 				</div>
 			</div>

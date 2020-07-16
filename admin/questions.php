@@ -10,9 +10,9 @@
 		<img src="../resource/image/logo.png" class="logo">
 
 		<div class="nav">
-			<a href="index.html">Home</a>
-			<a href="dashboard.html">Dashboard</a>
-			<a href="../logout.html">Logout</a>
+			<a href="index.php">Home</a>
+			<a href="dashboard.php">Dashboard</a>
+			<a href="../logout.php">Logout</a>
 		</div>
 	</header>
 
@@ -33,7 +33,7 @@
 					<tr>
 						<td>1</td>
 						<td>
-							<a href="../answers.html">Question will be printed here.</a>
+							<a href="../answers.php">Question will be printed here.</a>
 						</td>
 						<td>C++</td>
 					</tr>
