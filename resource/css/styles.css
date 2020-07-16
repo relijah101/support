@@ -1,0 +1,117 @@
+.primary{
+	color: #1761a0;
+}
+@font-face {
+    src: url("Nunito-Regular.ttf");
+    font-family: 'Nunito';
+}
+*{
+	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+
+}
+body{
+	min-height: 100vh;
+	position: relative;
+	font-family: 'Nunito', Arial;
+	overflow-x: hidden;
+}
+main{
+	min-height: 100vh;
+	background-color: #FFF;
+}
+
+header{
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 12px;
+}
+
+.logo{width: 180px;}
+
+.nav > a:link,
+.nav > a:visited{
+	padding: 8px 14px;
+	color: #1761a0;
+	margin: 0 1px;
+	font-size: 12px;
+}
+
+.nav > a:hover,
+.nav > a:active,
+.nav > a.active{
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #1761a0;
+}
+
+h1{
+	color: #FFF;
+}
+
+a.btn-ghost:link,
+a.btn-ghost:visited,
+.btn-ghost{
+	background-color: #1761a0;
+	border-radius: 80px;
+	border: thin solid transparent;
+	padding: 8px 22px;
+	color: #FFF;
+}
+
+a.btn-ghost:hover,
+.btn-ghost:hover{
+	background-color: transparent;
+	border: thin solid #1761a0;
+}
+
+.btn-ghost:hover{
+	color: #1761a0;
+}
+
+.btn-ghost{
+	padding: 4px 16px;
+	font-size: 12px;
+}
+
+.title{
+	text-align: center; 
+	padding-bottom: 5px; 
+	border-bottom: thin solid #1761a0;
+}
+
+label{font-size: 12px;}
+
+
+/**************************************/
+/* QUESTIONS */
+/**************************************/
+.question{
+	overflow: hidden;
+	margin-bottom: 10px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #eee;
+}
+.question > .details{
+	font-size: 12px;
+}
+
+
+
+footer{
+	color: #1761a0;
+	font-size: 10px;
+	text-align: center;
+	bottom: 0;
+	position: absolute;
+	padding: 8px;
+	width: 100%;
+}
