@@ -111,6 +111,29 @@ label{font-size: 12px;}
 	font-size: 14px;
 	border-bottom: .5px solid #eee;
 }
+/*************************************/
+.card{
+	height: 200px;
+	overflow: hidden;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	margin-bottom: 12px;
+	position: relative;
+}
+.card .text{
+	padding: 5px 12px;
+	background-color: #ffdc73;
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.card a:link h1,
+.card a:visited h1{
+	color: black;
+}
 
 footer{
 	color: #1761a0;
