@@ -40,7 +40,7 @@ if(!mysqli_error($con)){
 		<img src="../resource/image/logo.png" class="logo">
 
 		<div class="nav">
-			<a href="index.php">Home</a>
+			<a href="../index.php">Home</a>
 			<a href="#" class="active">Dashboard</a>
 			<a href="../logout.php">Logout</a>
 		</div>

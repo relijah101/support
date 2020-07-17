@@ -1,3 +1,7 @@
+<?php
+session_start();
+require('config/setup.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +22,18 @@
 
 			<div class="nav">
 				<a href="#" class="active">Home</a>
+				<?php
+				if(isset($_SESSION['id'])){
+				?>
+				<a href="<?php if($_SESSION['role'] === 'admin') { echo 'admin/dashboard.php'; }else echo 'users/home.php'; ?>">Dashboard</a>
+				<a href="logout.php">Logout</a>
+				<?php
+				}else{
+				?>
 				<a href="login.php">Login</a>
+				<?php
+				}
+				?>
 			</div>
 		</header>
 

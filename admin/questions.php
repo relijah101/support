@@ -21,7 +21,7 @@ require('../config/setup.php');
 		<img src="../resource/image/logo.png" class="logo">
 
 		<div class="nav">
-			<a href="index.php">Home</a>
+			<a href="../index.php">Home</a>
 			<a href="dashboard.php">Dashboard</a>
 			<a href="../logout.php">Logout</a>
 		</div>
