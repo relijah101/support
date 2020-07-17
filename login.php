@@ -1,5 +1,8 @@
 
-<?php require('config/setup.php'); ?>
+<?php 
+	session_start();
+	require('config/setup.php'); 
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -121,7 +124,7 @@
 							if(!empty($email) && !empty($password)){
 
 								// Send request to the database to retrieve user with this email and password
-								$sql = "SELECT users.id, users.status, roles.name, users.email FROM users 
+								$sql = "SELECT users.id, users.username, users.status, roles.name, users.email FROM users 
 										INNER JOIN roles ON users.role = roles.id
 										WHERE email = '$email' AND password = sha('$password') ";
 								$result = mysqli_query($con, $sql);
@@ -140,21 +143,21 @@
 
 										if($row['status'] == 0){
 
-											echo "Here 3";
-
 											echo "<div class='alert alert-danger'>Your account is disabled.<br/>Please contact admin.</div>";
 
 										}else if($row['status'] == 1){
-											echo "Here 4s";
+											
 											$id = $row['id'];
 											$role = strtolower($row['name']);
+											$username = $row['username'];
 
 											$_SESSION['id'] = $id;
 											$_SESSION['email'] = $email;
 											$_SESSION['role'] = $role;
+											$_SESSION['username'] = $username;
 
 											if($role === 'admin'){
-												header("location: admin/");
+												header("location: admin/dashboard.php");
 												
 											}else if($role === 'user'){
 												header("location: users/");

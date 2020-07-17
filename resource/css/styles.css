@@ -24,6 +24,10 @@ main{
 	background-color: #FFF;
 }
 
+.font-sm{
+	font-size: 11px;
+}
+
 header{
 	position: relative;
 	display: flex;
