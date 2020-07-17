@@ -45,3 +45,8 @@ CREATE TABLE answers(
 	FOREIGN KEY (user_id) REFERENCES users (id), 
 	FOREIGN KEY (question_id) REFERENCES questions (id) 
 );
+
+
+## Create user roles
+INSERT INTO roles (name) VALUES ('admin');
+INSERT INTO roles (name) VALUES ('user');

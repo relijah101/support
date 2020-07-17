@@ -1,3 +1,5 @@
+
+<?php require('config/setup.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +25,51 @@
 				<div class="">
 					<div class="text-center"><span class="title">Sign up</span></div>
 
-					<form class="mt-4">
+					<?php
+						if(isset($_POST['register'])){
+
+							// Clean the data received from the form
+							$username = mysqli_real_escape_string($con, $_POST['username']);
+							$email = mysqli_real_escape_string($con, $_POST['email']);
+							$password = mysqli_real_escape_string($con, $_POST['password']);
+							$re_password = mysqli_real_escape_string($con, $_POST['re-password']);
+
+							// Check if the data is not empty
+							if(!empty($username) && !empty($email) && !empty($password) && !empty($re_password)){
+
+								// Check if the two passwords match
+								if($password ===  $re_password){
+
+									// Insert the data to the database 
+									$sql = "INSERT INTO users (username, email, password, status, role) 
+											VALUES ('$username', '$email', sha('$password'), 1, 2)";
+									$result = mysqli_query($con, $sql);
+
+									// If there is no error from the request
+									if(!mysqli_error($con)){
+
+										echo "<div class='alert alert-success'><strong>Error:</strong> Registration Successfully. Login >> </div>";
+
+									}else {
+
+										echo "<div class='alert alert-danger'>Registration failed. Please try again.</div>" . mysqli_error($con);
+
+									}
+
+								}else{
+
+									$password = "";
+									$re_password = "";
+									echo "<div class='alert alert-warning'>Passwords do not match.</div>";
+
+								}
+
+							}
+						}
+
+						?>
+
+					<form class="mt-4" method="post" action="login.php">
 
 						<div class="form-group row">
 							<div class="col-12 col-md-6">
@@ -54,7 +100,7 @@
 
 						<div class="form-group row">
 							<div class="col-12 text-center">
-								<button type="submit" class="btn btn-ghost">Register</button>
+								<button type="submit" class="btn btn-ghost" name="register">Register</button>
 							</div>
 						</div>
 					</form>
@@ -64,11 +110,82 @@
 				<div class="">
 					<div class="text-center"><span class="title">Log in</span></div>
 
-					<form class="mt-4">
+					<?php
+						if(isset($_POST['login'])){
+
+							// Clean the data received from the form
+							$email = mysqli_real_escape_string($con, $_POST['email']);
+							$password = mysqli_real_escape_string($con, $_POST['password']);
+
+							// Check if the data is not empty
+							if(!empty($email) && !empty($password)){
+
+								// Send request to the database to retrieve user with this email and password
+								$sql = "SELECT users.id, users.status, roles.name, users.email FROM users 
+										INNER JOIN roles ON users.role = roles.id
+										WHERE email = '$email' AND password = sha('$password') ";
+								$result = mysqli_query($con, $sql);
+
+								// If there is no error from the request
+								if(!mysqli_error($con)){
+
+									// If 0 number of rows are returned means there is no user with such username and password
+									if(mysqli_num_rows($result) <= 0){
+
+										echo "<div class='alert alert-warning'><strong>Error:</strong> Wrong credentials.</div>";
+
+									}else {
+
+										$row = mysqli_fetch_assoc($result);
+
+										if($row['status'] == 0){
+
+											echo "Here 3";
+
+											echo "<div class='alert alert-danger'>Your account is disabled.<br/>Please contact admin.</div>";
+
+										}else if($row['status'] == 1){
+											echo "Here 4s";
+											$id = $row['id'];
+											$role = strtolower($row['name']);
+
+											$_SESSION['id'] = $id;
+											$_SESSION['email'] = $email;
+											$_SESSION['role'] = $role;
+
+											if($role === 'admin'){
+												header("location: admin/");
+												
+											}else if($role === 'user'){
+												header("location: users/");
+											}
+
+											die();
+										}
+									}
+
+								}else{
+
+									$password = "";
+									echo "<div class='alert alert-warning'><strong>Error:</strong> Login failed. " . mysqli_error($con) ."</div>";
+
+								}
+							}else{
+
+								$password = "";
+								echo "<div class='alert alert-warning'><strong>Error:</strong> Please fill all fields.</div>";
+
+							}
+
+						}
+
+						?>
+
+					<form class="mt-4" method="post" action="login.php">
 						<div class="form-group row">
 							<div class="col-12">
 								<label>Email</label>
-								<input class="form-control" type="email" name="email" required placeholder="Email"/>
+								<input class="form-control" type="email" name="email" required placeholder="Email" />
 							</div>
 						</div>
 
@@ -81,7 +198,7 @@
 
 						<div class="form-group row">
 							<div class="col-12 text-center">
-								<button type="submit" class="btn btn-ghost">Login</button>
+								<button type="submit" class="btn btn-ghost" name="login">Login</button>
 							</div>
 						</div>
 					</form>
