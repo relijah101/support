@@ -50,3 +50,7 @@ CREATE TABLE answers(
 ## Create user roles
 INSERT INTO roles (name) VALUES ('admin');
 INSERT INTO roles (name) VALUES ('user');
+
+
+## Set default admin account
+INSERT INTO users (username, email, password, status, role) VALUES ('admin', 'admin@ictsupport.com', sha('admin'), 1, 1);
